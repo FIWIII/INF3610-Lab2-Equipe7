@@ -1,0 +1,7 @@
+{
+  "workspaceRoot": "C:\\INF3610_Lab2",
+  "mapping": {
+    "sources\\hls\\hls_float32_A_algo\\mmult_algo.cpp": "hls_A_float32_algo",
+    "sources\\hls\\testbench\\tb_float32\\test_algo.cpp": "hls_A_float32_algo"
+  }
+}

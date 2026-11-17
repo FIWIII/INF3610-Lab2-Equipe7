@@ -1,0 +1,29 @@
+# Vitis - fichiers générés
+.ide/
+.rigel_lopper/
+**/hls/syn/
+**/hls/sim/
+**/hls/impl/
+**/hls/csim/
+**/hls/.autopilot/
+
+# Vivado - sorties générées
+*.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.jou
+*.log
+
+# Fichiers matériels volumineux
+*.bit
+*.bin
+*.dcp
+*.wdb
+
+# Fichiers temporaires
+*.tmp
+*.bak
+~$*.docx

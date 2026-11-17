@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\INF3610_Lab2\\hls_A_float32_algo",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=mmult_hw",
+      "-c",
+      "C:\\INF3610_Lab2\\sources\\hls\\hls_float32_A_algo\\mmult_algo.cpp"
+    ],
+    "file": "C:\\INF3610_Lab2\\sources\\hls\\hls_float32_A_algo\\mmult_algo.cpp"
+  },
+  {
+    "directory": "C:\\INF3610_Lab2\\hls_A_float32_algo",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\include",
+      "-c",
+      "C:\\INF3610_Lab2\\sources\\hls\\testbench\\tb_float32\\test_algo.cpp"
+    ],
+    "file": "C:\\INF3610_Lab2\\sources\\hls\\testbench\\tb_float32\\test_algo.cpp"
+  }
+]
