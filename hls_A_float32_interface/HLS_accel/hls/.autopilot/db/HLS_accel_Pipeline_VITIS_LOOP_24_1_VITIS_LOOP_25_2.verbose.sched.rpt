@@ -1,0 +1,305 @@
+
+
+================================================================
+== Vitis HLS Report for 'HLS_accel_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2'
+================================================================
+* Date:           Tue Nov 17 13:10:56 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        HLS_accel
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.426 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |     1767|     1767|  17.670 us|  17.670 us|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_24_1_VITIS_LOOP_25_2  |     1765|     1765|         3|          1|          1|  1764|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.81>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %INPUT_STREAM_V_data_V, i4 %INPUT_STREAM_V_keep_V, i4 %INPUT_STREAM_V_strb_V, i4 %INPUT_STREAM_V_user_V, i1 %INPUT_STREAM_V_last_V, i5 %INPUT_STREAM_V_id_V, i5 %INPUT_STREAM_V_dest_V, void @empty_5"   --->   Operation 9 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %INPUT_STREAM_V_dest_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %INPUT_STREAM_V_id_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %INPUT_STREAM_V_last_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %INPUT_STREAM_V_user_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %INPUT_STREAM_V_strb_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %INPUT_STREAM_V_keep_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %INPUT_STREAM_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln24 = store i6 0, i6 %i" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 18 'store' 'store_ln24' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln25 = store i6 0, i6 %j" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 19 'store' 'store_ln25' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln24 = br void %for.inc" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 20 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i11 %indvar_flatten" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 21 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.63ns)   --->   "%icmp_ln24 = icmp_eq  i11 %indvar_flatten_load, i11 1764" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 22 'icmp' 'icmp_ln24' <Predicate = true> <Delay = 1.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (1.63ns)   --->   "%add_ln24_1 = add i11 %indvar_flatten_load, i11 1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 23 'add' 'add_ln24_1' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln24 = br i1 %icmp_ln24, void %for.inc7, void %for.inc28.preheader.exitStub" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 24 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln24 = store i11 %add_ln24_1, i11 %indvar_flatten" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 25 'store' 'store_ln24' <Predicate = (!icmp_ln24)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.42>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%j_load = load i6 %j" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 26 'load' 'j_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (1.82ns)   --->   "%icmp_ln25 = icmp_eq  i6 %j_load, i6 42" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 27 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (1.18ns)   --->   "%select_ln24 = select i1 %icmp_ln25, i6 0, i6 %j_load" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 28 'select' 'select_ln24' <Predicate = true> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (1.82ns)   --->   "%switch_ln28 = switch i6 %select_ln24, void %arrayidx63.case.41, i6 0, void %arrayidx63.case.0, i6 1, void %arrayidx63.case.1, i6 2, void %arrayidx63.case.2, i6 3, void %arrayidx63.case.3, i6 4, void %arrayidx63.case.4, i6 5, void %arrayidx63.case.5, i6 6, void %arrayidx63.case.6, i6 7, void %arrayidx63.case.7, i6 8, void %arrayidx63.case.8, i6 9, void %arrayidx63.case.9, i6 10, void %arrayidx63.case.10, i6 11, void %arrayidx63.case.11, i6 12, void %arrayidx63.case.12, i6 13, void %arrayidx63.case.13, i6 14, void %arrayidx63.case.14, i6 15, void %arrayidx63.case.15, i6 16, void %arrayidx63.case.16, i6 17, void %arrayidx63.case.17, i6 18, void %arrayidx63.case.18, i6 19, void %arrayidx63.case.19, i6 20, void %arrayidx63.case.20, i6 21, void %arrayidx63.case.21, i6 22, void %arrayidx63.case.22, i6 23, void %arrayidx63.case.23, i6 24, void %arrayidx63.case.24, i6 25, void %arrayidx63.case.25, i6 26, void %arrayidx63.case.26, i6 27, void %arrayidx63.case.27, i6 28, void %arrayidx63.case.28, i6 29, void %arrayidx63.case.29, i6 30, void %arrayidx63.case.30, i6 31, void %arrayidx63.case.31, i6 32, void %arrayidx63.case.32, i6 33, void %arrayidx63.case.33, i6 34, void %arrayidx63.case.34, i6 35, void %arrayidx63.case.35, i6 36, void %arrayidx63.case.36, i6 37, void %arrayidx63.case.37, i6 38, void %arrayidx63.case.38, i6 39, void %arrayidx63.case.39, i6 40, void %arrayidx63.case.40" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 29 'switch' 'switch_ln28' <Predicate = true> <Delay = 1.82>
+ST_2 : Operation 30 [1/1] (1.82ns)   --->   "%add_ln25 = add i6 %select_ln24, i6 1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 30 'add' 'add_ln25' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (1.58ns)   --->   "%store_ln25 = store i6 %add_ln25, i6 %j" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 31 'store' 'store_ln25' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 170 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 170 'ret' 'ret_ln0' <Predicate = (icmp_ln24)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 6.26>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%i_load = load i6 %i" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 32 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.82ns)   --->   "%add_ln24 = add i6 %i_load, i6 1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 33 'add' 'add_ln24' <Predicate = (icmp_ln25)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_24_1_VITIS_LOOP_25_2_str"   --->   Operation 34 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1764, i64 1764, i64 1764"   --->   Operation 35 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.18ns)   --->   "%select_ln24_1 = select i1 %icmp_ln25, i6 %add_ln24, i6 %i_load" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 36 'select' 'select_ln24_1' <Predicate = true> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln24 = zext i6 %select_ln24_1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 37 'zext' 'zext_ln24' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%a_addr = getelementptr i32 %a, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 38 'getelementptr' 'a_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%a_1_addr = getelementptr i32 %a_1, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 39 'getelementptr' 'a_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%a_2_addr = getelementptr i32 %a_2, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 40 'getelementptr' 'a_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%a_3_addr = getelementptr i32 %a_3, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 41 'getelementptr' 'a_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%a_4_addr = getelementptr i32 %a_4, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 42 'getelementptr' 'a_4_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%a_5_addr = getelementptr i32 %a_5, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 43 'getelementptr' 'a_5_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%a_6_addr = getelementptr i32 %a_6, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 44 'getelementptr' 'a_6_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%a_7_addr = getelementptr i32 %a_7, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 45 'getelementptr' 'a_7_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%a_8_addr = getelementptr i32 %a_8, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 46 'getelementptr' 'a_8_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%a_9_addr = getelementptr i32 %a_9, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 47 'getelementptr' 'a_9_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%a_10_addr = getelementptr i32 %a_10, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 48 'getelementptr' 'a_10_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%a_11_addr = getelementptr i32 %a_11, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 49 'getelementptr' 'a_11_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%a_12_addr = getelementptr i32 %a_12, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 50 'getelementptr' 'a_12_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%a_13_addr = getelementptr i32 %a_13, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 51 'getelementptr' 'a_13_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%a_14_addr = getelementptr i32 %a_14, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 52 'getelementptr' 'a_14_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%a_15_addr = getelementptr i32 %a_15, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 53 'getelementptr' 'a_15_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%a_16_addr = getelementptr i32 %a_16, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 54 'getelementptr' 'a_16_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%a_17_addr = getelementptr i32 %a_17, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 55 'getelementptr' 'a_17_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%a_18_addr = getelementptr i32 %a_18, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 56 'getelementptr' 'a_18_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%a_19_addr = getelementptr i32 %a_19, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 57 'getelementptr' 'a_19_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%a_20_addr = getelementptr i32 %a_20, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 58 'getelementptr' 'a_20_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%a_21_addr = getelementptr i32 %a_21, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 59 'getelementptr' 'a_21_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%a_22_addr = getelementptr i32 %a_22, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 60 'getelementptr' 'a_22_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%a_23_addr = getelementptr i32 %a_23, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 61 'getelementptr' 'a_23_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%a_24_addr = getelementptr i32 %a_24, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 62 'getelementptr' 'a_24_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%a_25_addr = getelementptr i32 %a_25, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 63 'getelementptr' 'a_25_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%a_26_addr = getelementptr i32 %a_26, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 64 'getelementptr' 'a_26_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%a_27_addr = getelementptr i32 %a_27, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 65 'getelementptr' 'a_27_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%a_28_addr = getelementptr i32 %a_28, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 66 'getelementptr' 'a_28_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%a_29_addr = getelementptr i32 %a_29, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 67 'getelementptr' 'a_29_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%a_30_addr = getelementptr i32 %a_30, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 68 'getelementptr' 'a_30_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%a_31_addr = getelementptr i32 %a_31, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 69 'getelementptr' 'a_31_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%a_32_addr = getelementptr i32 %a_32, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 70 'getelementptr' 'a_32_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%a_33_addr = getelementptr i32 %a_33, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 71 'getelementptr' 'a_33_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%a_34_addr = getelementptr i32 %a_34, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 72 'getelementptr' 'a_34_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%a_35_addr = getelementptr i32 %a_35, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 73 'getelementptr' 'a_35_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%a_36_addr = getelementptr i32 %a_36, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 74 'getelementptr' 'a_36_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%a_37_addr = getelementptr i32 %a_37, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 75 'getelementptr' 'a_37_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%a_38_addr = getelementptr i32 %a_38, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 76 'getelementptr' 'a_38_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%a_39_addr = getelementptr i32 %a_39, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 77 'getelementptr' 'a_39_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%a_40_addr = getelementptr i32 %a_40, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 78 'getelementptr' 'a_40_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%a_41_addr = getelementptr i32 %a_41, i64 0, i64 %zext_ln24" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 79 'getelementptr' 'a_41_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%specpipeline_ln26 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_1" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:26]   --->   Operation 80 'specpipeline' 'specpipeline_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] ( I:0.51ns O:0.51ns )   --->   "%empty = read i55 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i4P0A.i1P0A.i5P0A.i5P0A, i32 %INPUT_STREAM_V_data_V, i4 %INPUT_STREAM_V_keep_V, i4 %INPUT_STREAM_V_strb_V, i4 %INPUT_STREAM_V_user_V, i1 %INPUT_STREAM_V_last_V, i5 %INPUT_STREAM_V_id_V, i5 %INPUT_STREAM_V_dest_V" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:27]   --->   Operation 81 'read' 'empty' <Predicate = true> <Delay = 0.51> <CoreInst = "regslice">   --->   Core 135 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%w_data = extractvalue i55 %empty" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:27]   --->   Operation 82 'extractvalue' 'w_data' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%bitcast_ln8 = bitcast i32 %w_data" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:8->../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 83 'bitcast' 'bitcast_ln8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_40_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 84 'store' 'store_ln28' <Predicate = (select_ln24 == 40)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 85 'br' 'br_ln28' <Predicate = (select_ln24 == 40)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_39_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 86 'store' 'store_ln28' <Predicate = (select_ln24 == 39)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 87 'br' 'br_ln28' <Predicate = (select_ln24 == 39)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_38_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 88 'store' 'store_ln28' <Predicate = (select_ln24 == 38)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 89 'br' 'br_ln28' <Predicate = (select_ln24 == 38)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_37_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 90 'store' 'store_ln28' <Predicate = (select_ln24 == 37)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 91 'br' 'br_ln28' <Predicate = (select_ln24 == 37)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_36_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 92 'store' 'store_ln28' <Predicate = (select_ln24 == 36)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 93 'br' 'br_ln28' <Predicate = (select_ln24 == 36)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_35_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 94 'store' 'store_ln28' <Predicate = (select_ln24 == 35)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 95 'br' 'br_ln28' <Predicate = (select_ln24 == 35)> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_34_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 96 'store' 'store_ln28' <Predicate = (select_ln24 == 34)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 97 'br' 'br_ln28' <Predicate = (select_ln24 == 34)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_33_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 98 'store' 'store_ln28' <Predicate = (select_ln24 == 33)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 99 'br' 'br_ln28' <Predicate = (select_ln24 == 33)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_32_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 100 'store' 'store_ln28' <Predicate = (select_ln24 == 32)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 101 'br' 'br_ln28' <Predicate = (select_ln24 == 32)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_31_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 102 'store' 'store_ln28' <Predicate = (select_ln24 == 31)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 103 'br' 'br_ln28' <Predicate = (select_ln24 == 31)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_30_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 104 'store' 'store_ln28' <Predicate = (select_ln24 == 30)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 105 'br' 'br_ln28' <Predicate = (select_ln24 == 30)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_29_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 106 'store' 'store_ln28' <Predicate = (select_ln24 == 29)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 107 'br' 'br_ln28' <Predicate = (select_ln24 == 29)> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_28_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 108 'store' 'store_ln28' <Predicate = (select_ln24 == 28)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 109 'br' 'br_ln28' <Predicate = (select_ln24 == 28)> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_27_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 110 'store' 'store_ln28' <Predicate = (select_ln24 == 27)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 111 'br' 'br_ln28' <Predicate = (select_ln24 == 27)> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_26_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 112 'store' 'store_ln28' <Predicate = (select_ln24 == 26)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 113 'br' 'br_ln28' <Predicate = (select_ln24 == 26)> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_25_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 114 'store' 'store_ln28' <Predicate = (select_ln24 == 25)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 115 'br' 'br_ln28' <Predicate = (select_ln24 == 25)> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_24_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 116 'store' 'store_ln28' <Predicate = (select_ln24 == 24)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 117 'br' 'br_ln28' <Predicate = (select_ln24 == 24)> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_23_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 118 'store' 'store_ln28' <Predicate = (select_ln24 == 23)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 119 'br' 'br_ln28' <Predicate = (select_ln24 == 23)> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_22_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 120 'store' 'store_ln28' <Predicate = (select_ln24 == 22)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 121 'br' 'br_ln28' <Predicate = (select_ln24 == 22)> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_21_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 122 'store' 'store_ln28' <Predicate = (select_ln24 == 21)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 123 'br' 'br_ln28' <Predicate = (select_ln24 == 21)> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_20_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 124 'store' 'store_ln28' <Predicate = (select_ln24 == 20)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 125 'br' 'br_ln28' <Predicate = (select_ln24 == 20)> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_19_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 126 'store' 'store_ln28' <Predicate = (select_ln24 == 19)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 127 'br' 'br_ln28' <Predicate = (select_ln24 == 19)> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_18_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 128 'store' 'store_ln28' <Predicate = (select_ln24 == 18)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 129 'br' 'br_ln28' <Predicate = (select_ln24 == 18)> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_17_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 130 'store' 'store_ln28' <Predicate = (select_ln24 == 17)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 131 'br' 'br_ln28' <Predicate = (select_ln24 == 17)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_16_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 132 'store' 'store_ln28' <Predicate = (select_ln24 == 16)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 133 'br' 'br_ln28' <Predicate = (select_ln24 == 16)> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_15_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 134 'store' 'store_ln28' <Predicate = (select_ln24 == 15)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 135 'br' 'br_ln28' <Predicate = (select_ln24 == 15)> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_14_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 136 'store' 'store_ln28' <Predicate = (select_ln24 == 14)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 137 'br' 'br_ln28' <Predicate = (select_ln24 == 14)> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_13_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 138 'store' 'store_ln28' <Predicate = (select_ln24 == 13)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 139 'br' 'br_ln28' <Predicate = (select_ln24 == 13)> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_12_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 140 'store' 'store_ln28' <Predicate = (select_ln24 == 12)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 141 'br' 'br_ln28' <Predicate = (select_ln24 == 12)> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_11_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 142 'store' 'store_ln28' <Predicate = (select_ln24 == 11)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 143 'br' 'br_ln28' <Predicate = (select_ln24 == 11)> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_10_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 144 'store' 'store_ln28' <Predicate = (select_ln24 == 10)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 145 'br' 'br_ln28' <Predicate = (select_ln24 == 10)> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_9_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 146 'store' 'store_ln28' <Predicate = (select_ln24 == 9)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 147 'br' 'br_ln28' <Predicate = (select_ln24 == 9)> <Delay = 0.00>
+ST_3 : Operation 148 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_8_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 148 'store' 'store_ln28' <Predicate = (select_ln24 == 8)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 149 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 149 'br' 'br_ln28' <Predicate = (select_ln24 == 8)> <Delay = 0.00>
+ST_3 : Operation 150 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_7_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 150 'store' 'store_ln28' <Predicate = (select_ln24 == 7)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 151 'br' 'br_ln28' <Predicate = (select_ln24 == 7)> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_6_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 152 'store' 'store_ln28' <Predicate = (select_ln24 == 6)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 153 'br' 'br_ln28' <Predicate = (select_ln24 == 6)> <Delay = 0.00>
+ST_3 : Operation 154 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_5_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 154 'store' 'store_ln28' <Predicate = (select_ln24 == 5)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 155 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 155 'br' 'br_ln28' <Predicate = (select_ln24 == 5)> <Delay = 0.00>
+ST_3 : Operation 156 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_4_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 156 'store' 'store_ln28' <Predicate = (select_ln24 == 4)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 157 'br' 'br_ln28' <Predicate = (select_ln24 == 4)> <Delay = 0.00>
+ST_3 : Operation 158 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_3_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 158 'store' 'store_ln28' <Predicate = (select_ln24 == 3)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 159 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 159 'br' 'br_ln28' <Predicate = (select_ln24 == 3)> <Delay = 0.00>
+ST_3 : Operation 160 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_2_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 160 'store' 'store_ln28' <Predicate = (select_ln24 == 2)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 161 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 161 'br' 'br_ln28' <Predicate = (select_ln24 == 2)> <Delay = 0.00>
+ST_3 : Operation 162 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_1_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 162 'store' 'store_ln28' <Predicate = (select_ln24 == 1)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 163 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 163 'br' 'br_ln28' <Predicate = (select_ln24 == 1)> <Delay = 0.00>
+ST_3 : Operation 164 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 164 'store' 'store_ln28' <Predicate = (select_ln24 == 0)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 165 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 165 'br' 'br_ln28' <Predicate = (select_ln24 == 0)> <Delay = 0.00>
+ST_3 : Operation 166 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln28 = store i32 %bitcast_ln8, i6 %a_41_addr" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 166 'store' 'store_ln28' <Predicate = (select_ln24 != 0 & select_ln24 != 1 & select_ln24 != 2 & select_ln24 != 3 & select_ln24 != 4 & select_ln24 != 5 & select_ln24 != 6 & select_ln24 != 7 & select_ln24 != 8 & select_ln24 != 9 & select_ln24 != 10 & select_ln24 != 11 & select_ln24 != 12 & select_ln24 != 13 & select_ln24 != 14 & select_ln24 != 15 & select_ln24 != 16 & select_ln24 != 17 & select_ln24 != 18 & select_ln24 != 19 & select_ln24 != 20 & select_ln24 != 21 & select_ln24 != 22 & select_ln24 != 23 & select_ln24 != 24 & select_ln24 != 25 & select_ln24 != 26 & select_ln24 != 27 & select_ln24 != 28 & select_ln24 != 29 & select_ln24 != 30 & select_ln24 != 31 & select_ln24 != 32 & select_ln24 != 33 & select_ln24 != 34 & select_ln24 != 35 & select_ln24 != 36 & select_ln24 != 37 & select_ln24 != 38 & select_ln24 != 39 & select_ln24 != 40)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 42> <RAM>
+ST_3 : Operation 167 [1/1] (0.00ns)   --->   "%br_ln28 = br void %arrayidx63.exit" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28]   --->   Operation 167 'br' 'br_ln28' <Predicate = (select_ln24 != 0 & select_ln24 != 1 & select_ln24 != 2 & select_ln24 != 3 & select_ln24 != 4 & select_ln24 != 5 & select_ln24 != 6 & select_ln24 != 7 & select_ln24 != 8 & select_ln24 != 9 & select_ln24 != 10 & select_ln24 != 11 & select_ln24 != 12 & select_ln24 != 13 & select_ln24 != 14 & select_ln24 != 15 & select_ln24 != 16 & select_ln24 != 17 & select_ln24 != 18 & select_ln24 != 19 & select_ln24 != 20 & select_ln24 != 21 & select_ln24 != 22 & select_ln24 != 23 & select_ln24 != 24 & select_ln24 != 25 & select_ln24 != 26 & select_ln24 != 27 & select_ln24 != 28 & select_ln24 != 29 & select_ln24 != 30 & select_ln24 != 31 & select_ln24 != 32 & select_ln24 != 33 & select_ln24 != 34 & select_ln24 != 35 & select_ln24 != 36 & select_ln24 != 37 & select_ln24 != 38 & select_ln24 != 39 & select_ln24 != 40)> <Delay = 0.00>
+ST_3 : Operation 168 [1/1] (1.58ns)   --->   "%store_ln24 = store i6 %select_ln24_1, i6 %i" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24]   --->   Operation 168 'store' 'store_ln24' <Predicate = true> <Delay = 1.58>
+ST_3 : Operation 169 [1/1] (0.00ns)   --->   "%br_ln25 = br void %for.inc" [../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25]   --->   Operation 169 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.815ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of constant 0 11 bit on local variable 'indvar_flatten' [61]  (1.588 ns)
+	'load' operation 11 bit ('indvar_flatten_load', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) on local variable 'indvar_flatten' [66]  (0.000 ns)
+	'add' operation 11 bit ('add_ln24_1', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) [68]  (1.639 ns)
+	'store' operation ('store_ln24', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) of variable 'add_ln24_1', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24 11 bit on local variable 'indvar_flatten' [255]  (1.588 ns)
+
+ <State 2>: 6.426ns
+The critical path consists of the following:
+	'load' operation 6 bit ('j_load', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25) on local variable 'j', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25 [71]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln25', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25) [76]  (1.825 ns)
+	'select' operation 6 bit ('select_ln24', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) [77]  (1.188 ns)
+	'add' operation 6 bit ('add_ln25', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25) [254]  (1.825 ns)
+	'store' operation ('store_ln25', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25) of variable 'add_ln25', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25 6 bit on local variable 'j', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:25 [257]  (1.588 ns)
+
+ <State 3>: 6.267ns
+The critical path consists of the following:
+	'load' operation 6 bit ('i_load', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) on local variable 'i', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24 [72]  (0.000 ns)
+	'add' operation 6 bit ('add_ln24', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) [73]  (1.825 ns)
+	'select' operation 6 bit ('select_ln24_1', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:24) [78]  (1.188 ns)
+	'getelementptr' operation 6 bit ('a_3_addr', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28) [83]  (0.000 ns)
+	'store' operation ('store_ln28', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28) of variable 'bitcast_ln8', ../sources/hls/hls_float32_A_interface/mmult_axi.cpp:8->../sources/hls/hls_float32_A_interface/mmult_axi.cpp:28 32 bit on array 'a_3' [239]  (3.254 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

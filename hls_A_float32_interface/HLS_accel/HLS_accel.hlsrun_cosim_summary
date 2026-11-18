@@ -1,0 +1,230 @@
+<ENTRY>
+{
+ "thisFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\HLS_accel.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/17/26 13:15:55",
+ "timestampMillis": "1794939355759",
+ "buildStep": {
+  "cmdId": "6ba3f62a-3626-4865-b584-53ecfa15395d",
+  "name": "vitis-run",
+  "logFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\logs\\HLS_accel.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config C:\\INF3610_Lab2\\hls_A_float32_interface\\hls_config.cfg --work_dir HLS_accel ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "C:\\INF3610_Lab2\\hls_A_float32_interface\\hls_config.cfg",
+   "--work_dir",
+   "HLS_accel"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\INF3610_Lab2\\hls_A_float32_interface"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:15:55",
+ "timestampMillis": "1794939355760",
+ "status": {
+  "cmdId": "6ba3f62a-3626-4865-b584-53ecfa15395d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361110",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "HLS_accel",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/INF3610_Lab2\\sources\\hls\\hls_float32_A_interface\\mmult_axi.cpp",
+     "C:/INF3610_Lab2\\sources\\hls\\hls_float32_A_interface\\mmult_axi.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_config.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_core.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_reference.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361112",
+ "buildStep": {
+  "cmdId": "ef24923f-f301-4d4a-9d39-9744978ba492",
+  "name": "",
+  "logFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\INF3610_Lab2\\hls_A_float32_interface"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361113",
+ "status": {
+  "cmdId": "ef24923f-f301-4d4a-9d39-9744978ba492",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361113",
+ "report": {
+  "path": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls\\sim\\report\\HLS_accel_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361114",
+ "report": {
+  "path": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361114",
+ "report": {
+  "path": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361115",
+ "report": {
+  "path": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:16:01",
+ "timestampMillis": "1794939361116",
+ "report": {
+  "path": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:18:37",
+ "timestampMillis": "1794939517249",
+ "status": {
+  "cmdId": "ef24923f-f301-4d4a-9d39-9744978ba492",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:18:37",
+ "timestampMillis": "1794939517491",
+ "status": {
+  "cmdId": "6ba3f62a-3626-4865-b584-53ecfa15395d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:18:37",
+ "timestampMillis": "1794939517494",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:18:37",
+ "timestampMillis": "1794939517494",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

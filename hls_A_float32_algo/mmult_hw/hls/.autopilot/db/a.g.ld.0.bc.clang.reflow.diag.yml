@@ -1,0 +1,130 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                   Line: 4, Column: 2 }
+Function:        _Z8mmult_hwPA42_fS0_S0_
+Args:            
+  - Callee:          'mmult_core(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h, 
+                       Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mmult_hw(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                       Line: 3, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h, 
+                   Line: 21, Column: 17 }
+Function:        _ZL10mmult_corePA42_fS0_S0_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h, 
+                   Line: 9, Column: 0 }
+Function:        _ZL10mmult_corePA42_fS0_S0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L3
+  - String:          ''' ('
+  - LoopLoc:         '../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:21:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          mmult_core
+  - String:          ''' completely with a factor of '
+  - Factor:          '42'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                   Line: 4, Column: 2 }
+Function:        _Z8mmult_hwPA42_fS0_S0_
+Args:            
+  - Callee:          'mmult_core(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h, 
+                       Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mmult_hw(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                       Line: 3, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_mmult_hw_ir
+Args:            
+  - Callee:          'mmult_hw(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                       Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_mmult_hw_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                   Line: 3, Column: 0 }
+Function:        _Z8mmult_hwPA42_fS0_S0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          a
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '21'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                   Line: 3, Column: 0 }
+Function:        _Z8mmult_hwPA42_fS0_S0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '21'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                   Line: 4, Column: 2 }
+Function:        _Z8mmult_hwPA42_fS0_S0_
+Args:            
+  - Callee:          'mmult_core(float (*) [42], float (*) [42], float (*) [42]) (.1)'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h, 
+                       Line: 9, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'mmult_hw(float (*) [42], float (*) [42], float (*) [42])'
+    DebugLoc:        { File: ../sources/hls/hls_float32_A_algo/mmult_algo.cpp, 
+                       Line: 3, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

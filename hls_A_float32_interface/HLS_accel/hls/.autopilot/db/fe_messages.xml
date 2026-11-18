@@ -1,0 +1,83 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:154:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:255:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:372:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:380:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:389:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:400:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:412:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:423:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:440:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:11:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a type=complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:12:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:17:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=HLS_accel" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:18:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=INPUT_STREAM" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:19:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=OUTPUT_STREAM" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:20:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CONTROL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:26:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:32:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:39:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="HLS_accel" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:21:17" msg_body="Loop 'L3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:9:0" msg_body="Unrolling loop 'L3' (../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:21:17) in function 'mmult_core' completely with a factor of 42">
+        <args Factor="42" LoopLoc="../sources/hls/hls_float32_A_interface/../common/float32/mmult_core.h:21:17" LoopName="L3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:17:0" msg_body="Inlining function 'hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;::axis()' into 'HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;::axis()" Callee-DebugLoc="File {C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h} Line 217 Column 0" Caller="HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../sources/hls/hls_float32_A_interface/mmult_axi.cpp Line 17 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:17:0" msg_body="Inlining function 'bits_to_float(ap_uint&lt;32&gt;)' into 'HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="bits_to_float(ap_uint&lt;32&gt;)" Callee-DebugLoc="File ../sources/hls/hls_float32_A_interface/mmult_axi.cpp Line 5 Column 0" Caller="HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../sources/hls/hls_float32_A_interface/mmult_axi.cpp Line 17 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:17:0" msg_body="Inlining function 'float_to_bits(float)' into 'HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="float_to_bits(float)" Callee-DebugLoc="File ../sources/hls/hls_float32_A_interface/mmult_axi.cpp Line 10 Column 0" Caller="HLS_accel(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 4ul, 5ul, 5ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ../sources/hls/hls_float32_A_interface/mmult_axi.cpp Line 17 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:21:11" msg_body="Applying array_partition to 'a': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_interface/mmult_axi.cpp:21:24" msg_body="Applying array_partition to 'b': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="b"/>
+    </msg>
+</xilinx:hls_fe_msgs>

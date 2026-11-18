@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h" line="17" pragmaType="pipeline" parentfunction="mmult_core" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h" line="11" pragmaType="array_partition" parentfunction="mmult_core" dim="2" factor="21" mode="block" dynamic="0" variable="a"/>
+<pragma file="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h" line="12" pragmaType="array_partition" parentfunction="mmult_core" dim="1" factor="21" mode="block" dynamic="0" variable="b"/>
+</pragmas>

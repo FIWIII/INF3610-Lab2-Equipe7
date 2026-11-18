@@ -1,0 +1,3 @@
+relativeroot=C:/INF3610_Lab2/hls_A_float32_interface
+original_argv=--mode hls --package --config C:\INF3610_Lab2\hls_A_float32_interface\hls_config.cfg --work_dir HLS_accel 
+

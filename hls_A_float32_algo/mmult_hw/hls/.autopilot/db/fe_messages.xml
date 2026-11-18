@@ -1,0 +1,26 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:11:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a type=block factor=21 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:12:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b type=block factor=21 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:17:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="mmult_core" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mmult_hw" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mmult_hw" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:21:17" msg_body="Loop 'L3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:9:0" msg_body="Unrolling loop 'L3' (../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:21:17) in function 'mmult_core' completely with a factor of 42">
+        <args Factor="42" LoopLoc="../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h:21:17" LoopName="L3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_algo/mmult_algo.cpp:3:0" msg_body="Applying array_partition to 'a': Block partitioning with factor 21 on dimension 2.">
+        <args Dim="2" Factor="21" Mode="Block" UOName="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../sources/hls/hls_float32_A_algo/mmult_algo.cpp:3:0" msg_body="Applying array_partition to 'b': Block partitioning with factor 21 on dimension 1.">
+        <args Dim="1" Factor="21" Mode="Block" UOName="b"/>
+    </msg>
+</xilinx:hls_fe_msgs>

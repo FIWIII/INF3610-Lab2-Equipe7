@@ -1,0 +1,71 @@
+<dict>
+  <key>main-file</key>
+  <string>C:/INF3610_Lab2/hls_A_float32_algo/mmult_hw/hls/.autopilot/db/mmult_algo.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h</string>
+      <key>line</key>
+      <integer>11</integer>
+      <key>column</key>
+      <integer>1</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=mmult_core_XLX_SEP_ PragmaOptions=variable=a type=block factor=21 dim=2_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>6999</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h</string>
+      <key>line</key>
+      <integer>12</integer>
+      <key>column</key>
+      <integer>1</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=mmult_core_XLX_SEP_ PragmaOptions=variable=b type=block factor=21 dim=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>6999</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../sources/hls/hls_float32_A_algo/../common/float32/mmult_core.h</string>
+      <key>line</key>
+      <integer>17</integer>
+      <key>column</key>
+      <integer>1</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=mmult_core_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>6999</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>directive</string>
+      <key>line</key>
+      <integer>1</integer>
+      <key>column</key>
+      <integer>1</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=mmult_hw_XLX_SEP_ PragmaOptions=name=mmult_hw_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>6999</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

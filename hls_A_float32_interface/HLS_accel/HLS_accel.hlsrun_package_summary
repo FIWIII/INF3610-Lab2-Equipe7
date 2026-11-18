@@ -1,0 +1,160 @@
+<ENTRY>
+{
+ "thisFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\HLS_accel.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/17/26 13:26:06",
+ "timestampMillis": "1794939966434",
+ "buildStep": {
+  "cmdId": "2d251ca6-1adc-470e-a4ef-e3db781ff526",
+  "name": "vitis-run",
+  "logFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\logs\\HLS_accel.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config C:\\INF3610_Lab2\\hls_A_float32_interface\\hls_config.cfg --work_dir HLS_accel ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "C:\\INF3610_Lab2\\hls_A_float32_interface\\hls_config.cfg",
+   "--work_dir",
+   "HLS_accel"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\INF3610_Lab2\\hls_A_float32_interface"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:26:06",
+ "timestampMillis": "1794939966434",
+ "status": {
+  "cmdId": "2d251ca6-1adc-470e-a4ef-e3db781ff526",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/17/26 13:26:11",
+ "timestampMillis": "1794939971665",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "HLS_accel",
+     "file": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\HLS_accel.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/INF3610_Lab2\\sources\\hls\\hls_float32_A_interface\\mmult_axi.cpp",
+     "C:/INF3610_Lab2\\sources\\hls\\hls_float32_A_interface\\mmult_axi.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_config.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_core.h",
+     "C:/INF3610_Lab2\\sources\\hls\\common\\float32\\mmult_reference.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/17/26 13:26:11",
+ "timestampMillis": "1794939971668",
+ "buildStep": {
+  "cmdId": "8ccf4aa0-647e-4100-919f-6ac6d2a0076a",
+  "name": "",
+  "logFile": "C:/INF3610_Lab2\\hls_A_float32_interface\\HLS_accel\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\INF3610_Lab2\\hls_A_float32_interface"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:26:11",
+ "timestampMillis": "1794939971668",
+ "status": {
+  "cmdId": "8ccf4aa0-647e-4100-919f-6ac6d2a0076a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:26:28",
+ "timestampMillis": "1794939988730",
+ "status": {
+  "cmdId": "8ccf4aa0-647e-4100-919f-6ac6d2a0076a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/17/26 13:26:28",
+ "timestampMillis": "1794939988826",
+ "status": {
+  "cmdId": "2d251ca6-1adc-470e-a4ef-e3db781ff526",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:26:28",
+ "timestampMillis": "1794939988827",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/17/26 13:26:28",
+ "timestampMillis": "1794939988827",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,98 @@
+{
+    "1": {
+        "name": "HLS_accel_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2",
+        "file": "..\/sources\/hls\/hls_float32_A_interface\/mmult_axi.cpp",
+        "fileloc": "24",
+        "instructions": "165",
+        "total_instructions": "165",
+        "calls": "",
+        "basicblocks": "47",
+        "memory_accesses": "49",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "HLS_accel_Pipeline_VITIS_LOOP_37_5_VITIS_LOOP_38_6",
+        "file": "..\/sources\/hls\/hls_float32_A_interface\/mmult_axi.cpp",
+        "fileloc": "37",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "HLS_accel_Pipeline_VITIS_LOOP_30_3_VITIS_LOOP_31_4",
+        "file": "..\/sources\/hls\/hls_float32_A_interface\/mmult_axi.cpp",
+        "fileloc": "30",
+        "instructions": "165",
+        "total_instructions": "165",
+        "calls": "",
+        "basicblocks": "47",
+        "memory_accesses": "49",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "HLS_accel",
+        "file": "mmult_axi.cpp",
+        "fileloc": "16",
+        "instructions": "110",
+        "total_instructions": "767",
+        "calls": "1 3 4 2",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "4": {
+        "name": "mmult_core",
+        "file": "..\/sources\/hls\/hls_float32_A_interface\/..\/common\/float32\/mmult_core.h",
+        "fileloc": "7",
+        "instructions": "287",
+        "total_instructions": "287",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "91",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "87"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

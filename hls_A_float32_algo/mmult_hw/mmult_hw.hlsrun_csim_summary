@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "11/16/26 20:51:48",
- "timestampMillis": "1794880308930",
+ "dateTimestamp": "11/16/26 21:53:41",
+ "timestampMillis": "1794884021748",
  "buildStep": {
-  "cmdId": "d0662f30-067e-4825-a45e-bd3b9735ca99",
+  "cmdId": "b8783910-ccc9-4baf-86ac-f28df62bf791",
   "name": "vitis-run",
   "logFile": "C:/INF3610_Lab2\\hls_A_float32_algo\\mmult_hw\\logs\\mmult_hw.steps.log",
   "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\INF3610_Lab2\\hls_A_float32_algo\\hls_config.cfg --work_dir mmult_hw ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/16/26 20:51:48",
- "timestampMillis": "1794880308930",
+ "dateTimestamp": "11/16/26 21:53:41",
+ "timestampMillis": "1794884021749",
  "status": {
-  "cmdId": "d0662f30-067e-4825-a45e-bd3b9735ca99",
+  "cmdId": "b8783910-ccc9-4baf-86ac-f28df62bf791",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "11/16/26 20:52:06",
- "timestampMillis": "1794880326207",
+ "dateTimestamp": "11/16/26 21:53:46",
+ "timestampMillis": "1794884026907",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -84,10 +84,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "11/16/26 20:52:06",
- "timestampMillis": "1794880326210",
+ "dateTimestamp": "11/16/26 21:53:46",
+ "timestampMillis": "1794884026909",
  "buildStep": {
-  "cmdId": "eb0e81ba-1298-49f2-a0e3-45e5ba41096d",
+  "cmdId": "ab39c6fe-e595-4f4b-8bad-91708faf06a9",
   "name": "",
   "logFile": "C:/INF3610_Lab2\\hls_A_float32_algo\\mmult_hw\\hls\\hls.log",
   "commandLine": "",
@@ -100,10 +100,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/16/26 20:52:06",
- "timestampMillis": "1794880326211",
+ "dateTimestamp": "11/16/26 21:53:46",
+ "timestampMillis": "1794884026910",
  "status": {
-  "cmdId": "eb0e81ba-1298-49f2-a0e3-45e5ba41096d",
+  "cmdId": "ab39c6fe-e595-4f4b-8bad-91708faf06a9",
   "state": "CS_RUNNING"
  }
 }
@@ -111,10 +111,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/16/26 20:52:08",
- "timestampMillis": "1794880328797",
+ "dateTimestamp": "11/16/26 21:53:48",
+ "timestampMillis": "1794884028010",
  "status": {
-  "cmdId": "eb0e81ba-1298-49f2-a0e3-45e5ba41096d",
+  "cmdId": "ab39c6fe-e595-4f4b-8bad-91708faf06a9",
   "state": "CS_PASSED"
  }
 }
@@ -122,10 +122,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/16/26 20:52:08",
- "timestampMillis": "1794880328959",
+ "dateTimestamp": "11/16/26 21:53:48",
+ "timestampMillis": "1794884028124",
  "status": {
-  "cmdId": "d0662f30-067e-4825-a45e-bd3b9735ca99",
+  "cmdId": "b8783910-ccc9-4baf-86ac-f28df62bf791",
   "state": "CS_PASSED"
  }
 }
@@ -133,8 +133,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "11/16/26 20:52:08",
- "timestampMillis": "1794880328963",
+ "dateTimestamp": "11/16/26 21:53:48",
+ "timestampMillis": "1794884028125",
  "report": {
   "path": "",
   "name": "",
@@ -147,8 +147,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "11/16/26 20:52:08",
- "timestampMillis": "1794880328963",
+ "dateTimestamp": "11/16/26 21:53:48",
+ "timestampMillis": "1794884028125",
  "report": {
   "path": "",
   "name": "",

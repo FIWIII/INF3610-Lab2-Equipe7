@@ -1,0 +1,124 @@
+---
+MainSourceFile:  'C:/INF3610_Lab2/hls_A_float32_interface/HLS_accel/hls/.autopilot/db/mmult_axi.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          280630
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          281101
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          281573
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          626969
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_24_1:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      24
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2251894
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_24_1: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_25_2:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      25
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2251919
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_25_2: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_30_3:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      30
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2252043
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_30_3: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_31_4:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      31
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2252068
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_31_4: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_37_5:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      37
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2252212
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_37_5: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_38_6:  '
+      FilePath:        'C:\INF3610_Lab2\sources\hls\hls_float32_A_interface\mmult_axi.cpp'
+      FileOffset:      38
+      Replacements:
+        - FilePath:        'C:\INF3610_Lab2\hls_A_float32_interface\HLS_accel\hls\.autopilot\db\mmult_axi.pp.0.cpp'
+          Offset:          2252237
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_38_6: '
+    Level:           Remark
+    BuildDirectory:  'C:\INF3610_Lab2\hls_A_float32_interface'
+...

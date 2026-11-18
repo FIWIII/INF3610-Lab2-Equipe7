@@ -1,0 +1,6 @@
+mmult_hw_fadd_32ns_32ns_32_5_full_dsp_1
+mmult_hw_fmul_32ns_32ns_32_4_max_dsp_1
+mmult_hw_mac_muladd_6ns_6ns_6ns_11_4_1
+mmult_hw_flow_control_loop_pipe_sequential_init
+mmult_core
+mmult_hw

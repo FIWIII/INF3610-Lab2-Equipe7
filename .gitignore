@@ -1,29 +1,42 @@
-# Vitis - fichiers générés
-.ide/
-.rigel_lopper/
-**/hls/syn/
+# Vitis workspace
+_ide/
+**/.metadata/
+**/.cache/
+
+# Vitis HLS - generated files
+**/hls/.debug/
 **/hls/sim/
+**/hls/syn/
 **/hls/impl/
-**/hls/csim/
-**/hls/.autopilot/
+**/reports/.db/
+**/compile_commands.json
+**/*.hlscompile_summary
+**/*.hlsrun_csim_summary
 
-# Vivado - sorties générées
-*.Xil/
-*.cache/
-*.runs/
-*.sim/
-*.hw/
-*.ip_user_files/
-*.jou
-*.log
+# Vivado generated files
+**/*.cache/
+**/*.runs/
+**/*.gen/
+**/*.ip_user_files/
+**/*.sim/
+**/*.hw/
+**/*.jou
+**/*.log
+**/*.str
+**/*.dcp
 
-# Fichiers matériels volumineux
+# Vitis generated build files
+**/build/
+**/_ide/
+**/Debug/
+**/Release/
+
+# Large generated binaries
 *.bit
 *.bin
-*.dcp
-*.wdb
+*.elf
+*.xsa
+*.zip
 
-# Fichiers temporaires
-*.tmp
-*.bak
-~$*.docx
+# Keep source code, configurations and reports
+!resultats/**/*.rpt

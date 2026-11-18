@@ -1,0 +1,65 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "3 3 1 2",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "mmult_axi.cpp",
+    "fileloc": 16,
+    "instructions": 287,
+    "loads": {
+      "L": 11
+    },
+    "memory_accesses": 36,
+    "name": "HLS_accel",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 587
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 45,
+    "file": "mmult_core.h",
+    "fileloc": 7,
+    "instructions": 272,
+    "loads": {
+      "L": 84
+    },
+    "memory_accesses": 85,
+    "name": "mmult_core",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 272
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mmult_axi.cpp",
+    "fileloc": 10,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "float_to_bits",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "mmult_axi.cpp",
+    "fileloc": 5,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "bits_to_float",
+    "total_instructions": 2
+  }
+}
